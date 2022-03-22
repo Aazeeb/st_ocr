@@ -1,6 +1,6 @@
 import numpy as np     
 import streamlit as st
-import pytesseract as pt
+import pytesseract 
 from PIL import Image #python Imaging library, to open image, streamlit does not support cv2 directly
 
 pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract' 
@@ -16,5 +16,5 @@ if uploaded_file is not None:
 
   if st.button("PREDICT"):  #creates a button called as predict
     st.write("Result...")   
-    op=pt.image_to_string(img)  #pytesseract converts img to text and prints
+    op=pytesseract.image_to_string(img)  #pytesseract converts img to text and prints
     st.title(op)
