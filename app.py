@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np   
 import streamlit as st
 import pytesseract as pt
 from PIL import Image #python Imaging library, to open image, streamlit does not support cv2 directly
