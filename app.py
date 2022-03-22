@@ -3,6 +3,7 @@ import streamlit as st
 import pytesseract as pt
 from PIL import Image #python Imaging library, to open image, streamlit does not support cv2 directly
 
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract' 
 st.set_option('deprecation.showfileUploaderEncoding',False) #to warning ignore
 st.title("OCR-Optical Character Recognition")  #print title and text
 st.text("Upload the Image")
